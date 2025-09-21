@@ -1,0 +1,30 @@
+/* basic styling adapted from your template */
+.container{ width:90%; max-width:1200px; margin:0 auto; }
+
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:20px 0; }
+.logo{ height:48px; }
+.navbar{ list-style:none; display:flex; gap:18px; align-items:center; }
+.navbar a{ color:#333; text-decoration:none; }
+.navbar a.active{ color:var(--main_color); }
+
+.about-header{ text-align:center; padding:40px 0; background:#f7f7f7; }
+.about-head{ display:flex; gap:30px; align-items:center; padding:50px 0; }
+.about-head img{ width:48%; border-radius:6px; object-fit:cover; }
+.about-head div{ width:52%; }
+
+.marquee{ background:#eee; padding:8px; margin-top:12px; overflow:hidden; white-space:nowrap; }
+
+.about-app .video{ margin:20px 0; max-width:720px; }
+.about-app video{ width:100%; border-radius:8px; display:block; }
+
+.feature{ display:grid; grid-template-columns:repeat(6,1fr); gap:18px; padding:30px 0; align-items:center; }
+.fe-box{ text-align:center; }
+.fe-box img{ width:48px; height:48px; object-fit:contain; display:block; margin:0 auto 8px; }
+@media (max-width:900px){
+  .about-head{ flex-direction:column; }
+  .feature{ grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:480px){
+  .feature{ grid-template-columns:repeat(2,1fr); }
+  .navbar{ display:none; }
+}
